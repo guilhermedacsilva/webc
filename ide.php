@@ -55,10 +55,13 @@ redirectIfNotLogged();
 </div>
 
 <script>
+WebC.console = $('#output');
 WebC.editor = CodeMirror.fromTextArea(document.getElementById('userCode'), {
 	lineNumbers: true,
 	matchBrackets: true,
 	mode: "text/x-csrc",
+	indentUnit: 4,
+	indentWithTabs: true,
 	extraKeys: WebC.codemirrorExtraKeys
 });
 </script>
