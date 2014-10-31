@@ -12,8 +12,9 @@ Requirements:
 Installation
 ====
 
-Copy to "www" folder, run SQL scripts (in that order).
+Copy it to "www" folder and run SQL scripts (in that order).
 Folder "user" must be readable/writable. It will contain source code (.c) and executables!
+
 Done!
 
 Folders
@@ -29,7 +30,7 @@ Folders
 PHPs
 ====
 
-index.php: login page.
-ide.php: ide page.
-include_me.php: functions (no OO).
-run.php: called by ajax; run gcc; verify some stuff; run the program; save the data in database.
+- index.php: login page.
+- ide.php: ide page.
+- include_me.php: functions (no OO).
+- run.php: called by ajax; run gcc; verify some stuff; run the program; save the data in database.
