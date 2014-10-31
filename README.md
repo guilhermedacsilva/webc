@@ -4,10 +4,10 @@ WebC
 Very simple web editor for C language.
 
 Requirements:
-> PHP 5
-> MySQL 5.5
-> Apache 2
-> GCC
+- PHP 5
+- MySQL 5.5
+- Apache 2
+- GCC
 
 Installation
 ====
@@ -19,12 +19,12 @@ Done!
 Folders
 ====
 
-> css: bootstrap, codemirror, custom CSS;
-> fonts: bootstrap fonts;
-> js: bootstrap, codemirror, jquery, custom JS
-> libs: codemirror;
-> project: database model and SQL;
-> user: user code and executables;
+- css: bootstrap, codemirror, custom CSS;
+- fonts: bootstrap fonts;
+- js: bootstrap, codemirror, jquery, custom JS
+- libs: codemirror;
+- project: database model and SQL;
+- user: user code and executables;
 
 PHPs
 ====
