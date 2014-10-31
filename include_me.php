@@ -10,7 +10,11 @@ define('CM_ADDON_HINT',CM_ADDON.'hint/');
 define('CM_THEME',CM.'theme/');
 
 try {
-	$pdo = new PDO('mysql:host=localhost;port=3306;dbname=webc', 'root', '123mudar', array( PDO::ATTR_PERSISTENT => false));
+	require_once 'configs.php';
+	$pdo = new PDO("mysql:host=$db[host];port=$db[port];dbname=$db[dbname]", 
+					$db['user'], 
+					$db['password'], 
+					array( PDO::ATTR_PERSISTENT => false));
 	$pdo->exec("SET NAMES 'utf8';");
 	$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (Exception $e) {
