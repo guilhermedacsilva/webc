@@ -20,7 +20,9 @@ ENGINE = InnoDB;
 CREATE  TABLE IF NOT EXISTS `code` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `text` TEXT NOT NULL ,
-  `timestamp` TIMESTAMP NOT NULL ,
+  `input` TEXT NOT NULL ,
+  `compiled` BOOLEAN NOT NULL ,
+  `date_create` DATETIME NOT NULL ,
   `console` TEXT NULL ,
   `user_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,

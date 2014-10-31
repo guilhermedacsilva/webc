@@ -47,23 +47,19 @@ redirectIfNotLogged();
 </div>
 
 <div class="container">
+	<h3 class="h3-usercode">Código fonte [F7]</h3>
+	<h3 class="h3-userinput">Dados de entrada [F9]</h3>
+	<div class="clear"></div>
 	<form role="form" method="post">
-		<textarea id="userCode" class="form-control" style="height: 60vh" placeholder="Insira o código fonte aqui."></textarea>
-		<br>
-		<textarea id="output" class="form-control" rows="4" placeholder="Console" disabled></textarea>
+		<textarea id="userCode" class="form-control userCode" style="height: 60vh" placeholder="Insira o código fonte aqui."></textarea>
+		<textarea id="userInput" class="form-control userInput" style="height: 60vh" placeholder="Insira o código fonte aqui."></textarea>
+		<div class="clear"></div>
+		<textarea id="output" class="form-control console" rows="4" placeholder="Console" disabled></textarea>
 	</form>
 </div>
 
 <script>
-WebC.console = $('#output');
-WebC.editor = CodeMirror.fromTextArea(document.getElementById('userCode'), {
-	lineNumbers: true,
-	matchBrackets: true,
-	mode: "text/x-csrc",
-	indentUnit: 4,
-	indentWithTabs: true,
-	extraKeys: WebC.codemirrorExtraKeys
-});
+WebC.init();
 </script>
 
 </body>

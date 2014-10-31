@@ -2,3 +2,29 @@ body {
   padding-top: 80px;
   background-color: #eee;
 }
+
+h3 {
+	margin: -15px 0 10px;
+	padding: 0;
+}
+
+.h3-usercode,
+.cm-s-webc-code.CodeMirror {
+	width: 70%;
+	margin-right: 3%;
+	float: left;
+}
+
+.h3-userinput,
+.cm-s-webc-input.CodeMirror {
+	width: 27%;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.console {
+	margin: 20px 0;
+}
