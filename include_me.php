@@ -104,14 +104,6 @@ function runGCC($source, $target) {
 }
 
 function runProgram($file, $data) {
-	/*
-	$dataIndex = -1;
-	if ($data) {
-		$data = explode("\n",$data);
-		$dataIndex = 0;
-	}
-	*/
-
 	$descriptor = array(
 	   0 => array("pipe", "r"),  //stdin
 	   1 => array("pipe", "w")  //stdout
