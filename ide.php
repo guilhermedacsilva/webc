@@ -1,7 +1,7 @@
 <?php
 require_once "include_me.php";
 redirectIfNotLogged();
-
+$lastRun = pdoGetLastCodeFromUser();
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,7 @@ redirectIfNotLogged();
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">IDE</a></li>
-				<li><a href="#">Compilar e Rodar [F10]</a></li>
+				<li><a href="#" onclick="WebC.run()">Compilar e Rodar [F10]</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
@@ -51,10 +51,10 @@ redirectIfNotLogged();
 	<h3 class="h3-userinput">Dados de entrada [F9]</h3>
 	<div class="clear"></div>
 	<form role="form" method="post">
-		<textarea id="userCode" class="form-control userCode" style="height: 60vh" placeholder="Insira o código fonte aqui."></textarea>
-		<textarea id="userInput" class="form-control userInput" style="height: 60vh" placeholder="Insira o código fonte aqui."></textarea>
+		<textarea id="userCode" class="form-control userCode" style="height: 70vh" placeholder="Insira o código fonte aqui."><?php echo $lastRun ? $lastRun['text'] : '' ?></textarea>
+		<textarea id="userInput" class="form-control userInput" style="height: 70vh" placeholder="Insira o código fonte aqui."><?php echo $lastRun ? $lastRun['input'] : '' ?></textarea>
 		<div class="clear"></div>
-		<textarea id="output" class="form-control console" rows="4" placeholder="Console" disabled></textarea>
+		<textarea id="output" class="form-control console" rows="4" placeholder="Console" disabled><?php echo $lastRun ? $lastRun['console'] : '' ?></textarea>
 	</form>
 </div>
 

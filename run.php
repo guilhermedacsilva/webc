@@ -6,7 +6,6 @@ if (!isLogged() || !isset($_POST['code'])) {
 	exit;
 }
 
-
 $executable = __DIR__ . '/user/'.$_SESSION['id'];
 $source = $executable . '.c';
 
@@ -27,6 +26,6 @@ if ($errors) {
 	}
 }
 
-saveAllUserData($_POST['code'],$_POST['input'], $console, $errors ? 1 : 0, $forbidden);
+saveAllUserData($_POST['code'],$_POST['input'], $console, $errors ? 0 : 1, $forbidden);
 
 echo $console;

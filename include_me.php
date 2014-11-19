@@ -57,6 +57,13 @@ function pdoInsertCode($code, $input, $console, $compiled, $forbidden) {
 	));
 }
 
+function pdoGetLastCodeFromUser() {
+	global $pdo;
+	$resp = $pdo->query('SELECT * FROM code WHERE user_id = ' . $_SESSION['id'] . ' ORDER BY id DESC LIMIT 1');
+	$row = $resp->fetch();
+	return $row;
+}
+
 function isLogged() {
 	return isset($_SESSION['name']) && isset($_SESSION['ra']);
 }

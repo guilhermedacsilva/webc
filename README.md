@@ -35,4 +35,4 @@ PHPs
 - ide.php: ide page.
 - include_me.php: functions (no OO).
 - run.php: called by ajax; run gcc; verify some stuff; run the program; save the data in database.
-- configs.php: database conection configuration.
+- configs.php: database connection configuration.
