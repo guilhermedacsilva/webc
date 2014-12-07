@@ -139,6 +139,10 @@ function runProgram($file, $data) {
 
 		fclose($pipes[0]);
 		fclose($pipes[1]);
+		$status = proc_get_status($process);
+		if ($status['running']) {
+			shell_exec("kill " . $status['pid']);
+		}
 		proc_close($process);
 		return $output;
 	}
